@@ -1,17 +1,8 @@
 
 $(document).ready(function() {
-    var data = readData();
-    var dataJSON = Papa.parse(data);
-
-    console.log(dataJSON);
-
+    var f = new File([""], "data.csv");
+    var data = Papa.parse(f);
+    console.log(data);
 });
 
-function readData(){
-    var client = new XMLHttpRequest();
-    client.open('GET', 'data.csv');
-    client.onreadystatechange = function() {
-    return client.responseText;
-}
-client.send();
-}
+]
