@@ -1,65 +1,67 @@
-*{
-    box-sizing: border-box;
-}
 body{
-    background-color: #f9f9f9;
+    background-color: #ced0a6;
 }
-#pageHead{
+.container{
+    padding-right: 0px;
+    padding-left: 0px;
 }
-#pageSect{
-    width: 756px;
-    margin: 0 auto;
+#header{
+    margin-bottom: 15px;
 }
-#pageTitle{
-    text-align: center;
-    font-size: 48px;
-}
-.navbar{
-    min-height: 100%;
-    width: 251px;
-    margin-right: 5px;
-    background-color: #fffedb;
-    float: left;
-    display: inline-block;
-}
-    .navList{
-        list-style: none;
-        padding: 0;
+    #logo{
+        font-weight: bold;
+        font-style: italic;
+
     }
-    .navItem{
-        padding: 2px;
-        margin-bottom: 5px;
-        background-color: #ff67fd;
+    #search{
+
     }
-    .navItem:hover{
-        background-color: #f6ff88;
+        #search>input{
+            float: right;
+        }
+    #nav{
+        background-color: #d9d9d9;
+        padding-left: 30px;
     }
-.articles{
-    width: 500px;
-    float: right;
+        #nav>div{
+            padding: 10px;
+            margin: 3px;
+
+        }
+
+#event-body{
+    background-color: #ffffff;
+    margin: 5px;
+    padding: 7px;
 }
-.article{
-    width: 500px;
-    min-height: 350px;
-    background-color: #e2e2e2;
-    padding: 5px;
-    margin-bottom: 10px;
-    display: inline-block;
-    border-bottom: 3px solid #a8a8a8;
-}
-    .articleImage{
-        width: 200px;
-        height: 200px;
-        background-color: #b1fffd;
-        border: 2px solid black;
+    .event{
+        margin-bottom: 15px;
+    }
+    .event-img{
         float: left;
-        margin-right: 10px;
+        height: 150px;
+        width: 150px;
+        margin: 20px;
     }
-    .articleTitle{
-        text-align: right;
+    .event-title{
     }
-    .articleText{
+    .event-date{
+        font-size: 10px;
+        color: #b9b9b9;
+        text-align: left;
     }
-    .articleLink{
-        text-align: right;
+    .event-time{
+        font-size: 10px;
+        color: #b9b9b9;
+        text-align: left;
+    }
+    .event-text{
+    }
+    .event-author{
+        font-size: 10px;
+        color: #b9b9b9;
+        float: right;
+    }
+    .readmore{
+        margin-left: 20px;
     }
