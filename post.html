@@ -9,50 +9,60 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Open+Sans" rel="stylesheet">
     <link href="styles.css" rel="stylesheet"/>
   </head>
   <body>
+      <div class="clearfix" id="header">
+          <div class="row" id="logo-search">
+              <div class="col-sm-6" id="logo">
+                  <a href="../fcav-event-tracker/">
+                      <h1 id="forwarn">ForWarn</h1>
+                      <small id="subtext">Sattelite-Based Change Recognition and Tracking</small>
+                  </a>
 
-    <div class="container" style="width:768px;margin:0 auto;">
-        <div class="clearfix" id="header">
-            <div class="row" id="logo-search">
-                <div class="col-sm-6" id="logo">
-                    <h1>ForWarn</h1>
-                    <small>Sattelite-Based Change Recognition and Tracking</small>
-                </div>
-                <div class="col-sm-6" id="search">
-                    <input type="search" placeholder="Search"/>
-                </div>
-            </div>
-            <div class="row" id="nav">
-                <div class="col-sm-2" id="home">
-                    <a href="#">Home</a>
-                </div>
-                <div class="col-sm-2" id="overview">
-                    <a href="#">Overview</a>
-                </div>
-                <div class="col-sm-2" id="highlights">
-                    <a href="#">Highlights</a>
-                </div>
-                <div class="col-sm-2" id="products">
-                    <a href="#">Products</a>
-                </div>
-                <div class="col-sm-2" id="support">
-                    <a href="#">Support</a>
-                </div>
-            </div>
-        </div>
+              </div>
+              <div class="col-sm-6" id="search">
+                  <input type="search" placeholder="Search"/>
+              </div>
+          </div>
+          <!-- <div class="row" id="nav">
+              <div class="col-sm-2" id="home">
+                  <a href="#">Home</a>
+              </div>
+              <div class="col-sm-2" id="overview">
+                  <a href="#">Overview</a>
+              </div>
+              <div class="col-sm-2" id="highlights">
+                  <a href="#">Highlights</a>
+              </div>
+              <div class="col-sm-2" id="products">
+                  <a href="#">Products</a>
+              </div>
+              <div class="col-sm-2" id="support">
+                  <a href="#">Support</a>
+              </div>
+          </div> -->
+      </div>
+    <div class="container">
 
-        <div class="row" id="event-body">
-            <div class="clearfix event-head">
-                <h1 class="event-title"></h1>
-                <small class="event-date"></small>
+
+        <div class="row" id="post-body">
+            <div class="clearfix post-head">
+                <h1 class="post-title"></h1>
+                <small class="post-date"></small>
             </div>
-            <div class="clearfix event-body">
-                <img src="#" / class="event-img">
-                <p class="event-text">
-                    
+            <div class="clearfix post-body">
+                <div class="post-img-box">
+                    <img src="#" / class="post-img">
+                    <div id="share-url">
+                        <a class="post-share-url btn btn-primary" href="#">View on Map</a>
+                    </div>
+                </div>
+                <p class="post-text">
+
                 </p>
+                <span class="post-author"></span>
             </div>
         </div>
 
@@ -61,7 +71,11 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="jquery.csv.min.js"></script>
-    <script src="script2.js"></script>
-
+    <script src="script.js"></script>
+    <script>
+    $(document).ready(function() {
+        getPostData();
+    });
+    </script>
   </body>
 </html>
