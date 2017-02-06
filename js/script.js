@@ -1,3 +1,5 @@
+var IMAGES = ["assets/1.png", "assets/2.png", "assets/3.png", "assets/4.png", "assets/5.png", "assets/6.png"];
+
 function makePromise() {
     return Promise.resolve($.ajax({
         type: "GET",
@@ -36,12 +38,12 @@ function makeEvents(data, page) {
         var con = data[i]["Event Notes"];
         var s = con.substr(0, len);
 
-        var images = ["assets/1.png", "assets/2.png", "assets/3.png", "assets/4.png", "assets/5.png", "assets/6.png"];
+
 
         var event = `
             <div class="clearfix event" id="event-` + data[i].ID + `">
             <div class="event-img-box">
-                <a href="post.html?id=` + data[i].ID + `"><img src="` + images[b] + `" class="event-img" /></a>
+                <a href="post.html?id=` + data[i].ID + `"><img src="` + IMAGES[b] + `" class="event-img" /></a>
                 <div class="event-share-url">
                     <a class="btn btn-primary" id="e` + data[i].ID + `" href="` + genURL(data, i, false) + `">View on Map</a>
                 </div>
@@ -99,7 +101,6 @@ function setPostData(data) {
     var textBlock;
     var author;
     var shareUrl;
-    var IMAGES = ["/assets/1.png", "/assets/2.png", "/assets/3.png", "/assets/4.png", "/assets/5.png", "/assets/6.png"];
 
     for (i = 0; i < data.length; i++) {
         if (data[i].ID == post) {
