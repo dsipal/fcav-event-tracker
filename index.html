@@ -1,6 +1,6 @@
-<!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,66 +9,81 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Cabin|Open+Sans" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet"/>
-  </head>
-  <body>
-      <div class="clearfix" id="header">
-          <div class="row" id="logo-search">
-              <div class="col-sm-6" id="logo">
-                  <a href="../fcav-event-tracker/">
-                      <h1 id="forwarn">ForWarn</h1>
-                      <small id="subtext">Sattelite-Based Change Recognition and Tracking</small>
-                  </a>
-              </div>
-              <div class="col-sm-6" id="search">
-                  <input type="search" placeholder="Search"/>
-              </div>
-          </div>
-          <!-- <div class="row" id="nav">
-              <div class="col-sm-2" id="home">
-                  <a href="#">Home</a>
-              </div>
-              <div class="col-sm-2" id="overview">
-                  <a href="#">Overview</a>
-              </div>
-              <div class="col-sm-2" id="highlights">
-                  <a href="#">Highlights</a>
-              </div>
-              <div class="col-sm-2" id="products">
-                  <a href="#">Products</a>
-              </div>
-              <div class="col-sm-2" id="support">
-                  <a href="#">Support</a>
-              </div>
-          </div> -->
-      </div>
+    <link href="css/global.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-29273508-4', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.csv.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+
     <div class="container">
 
+        <div class="clearfix" id="header">
+            <div class="row" id="logo-search">
+                <div class="col-sm-6" id="logo">
+                    <a href=".">
+                        <h1 id="forwarn">Event Tracker</h1>
+                        <span id="subtext">Satellite-Based Change Recognition and Tracking</span>
+                    </a>
+                </div>
+                <!-- <div class="col-sm-6" id="search">
+                    <input type="search" placeholder="Search"/>
+                </div> -->
+            </div>
+        </div>
 
-        <div class="clearfix" id="event-body">
-            <h3 id="">Event Tracker</h3>
+        <!-- <div class="clearfix" id="nav">
+            <ul class="main-menu">
+                <div class="clearfix">
 
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+                    <li class="menu-item"><a href="../">Home</a></li>
+                    <li class="menu-item"><a href="../about.html">About</a></li>
+
+                </div>
+
+            </ul>
+        </div> -->
+
+        <div class="clearfix event-body">
+            <div class="clearfix" id="post-list">
+
+            </div>
+            <div class="clearfix body-footer">
+
+            </div>
         </div>
 
 
 
     </div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="jquery.csv.min.js"></script>
-    <script src="script.js"></script>
-
     <script>
         $(document).ready(function() {
             getBrowseData();
         });
     </script>
-  </body>
+</body>
+
 </html>
