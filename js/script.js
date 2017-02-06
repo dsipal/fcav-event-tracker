@@ -43,7 +43,7 @@ function makeEvents(data, page) {
         var event = `
             <div class="clearfix event" id="event-` + data[i].ID + `">
             <div class="event-img-box">
-                <a href="post.html?id=` + data[i].ID + `"><img src="` + IMAGES[b] + `" class="event-img" /></a>
+                <a href="` + genURL(data, i, false) + `"><img src="` + IMAGES[b] + `" class="event-img" /></a>
                 <div class="event-share-url">
                     <a class="btn btn-primary" id="e` + data[i].ID + `" href="` + genURL(data, i, false) + `">View on Map</a>
                 </div>
@@ -122,9 +122,6 @@ function setPostData(data) {
         `;
         $(".post-text").append(para);
     }
-
-
-
 
     $(".post-title").html(title);
     $(".post-date").html(date);

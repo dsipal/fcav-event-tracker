@@ -7,6 +7,14 @@ function gaEvents() {
         });
     });
 
+    $('.event-img').click(function(event) {
+        $.ga.trackEvent({
+            category: 'Event Image',
+            action: 'Click',
+            label: $('.event-img').val()
+        });
+    });
+
     $('.event-share-url').click(function(event) {
         $.ga.trackEvent({
             category: 'Share Map URL',
@@ -16,7 +24,7 @@ function gaEvents() {
     });
     $('.post-share-url').click(function(event) {
         $.ga.trackEvent({
-            category: 'Share Map URL',
+            category: 'Share Map URL - Post Page',
             action: 'Click',
             label: $('.event-share-url').val()
         });
