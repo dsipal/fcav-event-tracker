@@ -36,7 +36,7 @@ function makeEvents(data, page) {
         var con = data[i]["Event Notes"];
         var s = con.substr(0, len);
 
-        var images = ["/assets/1.png", "/assets/2.png", "/assets/3.png", "/assets/4.png", "/assets/5.png", "/assets/6.png"];
+        var images = ["assets/1.png", "assets/2.png", "assets/3.png", "assets/4.png", "assets/5.png", "assets/6.png"];
 
         var event = `
             <div class="clearfix event" id="event-` + data[i].ID + `">
