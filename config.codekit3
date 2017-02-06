@@ -195,11 +195,29 @@
 		"oAP": "\/index.html",
 		"oF": 0
 		},
-	"\/js\/bootstrap-min.js": {
+	"\/js\/bootstrap.min.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/min\/bootstrap-min-min.js",
+		"oAP": "\/min\/bootstrap.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/gaEvents.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/min\/gaEvents-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/gaTrackEvents.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/min\/gaTrackEvents-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -227,6 +245,15 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/min\/script-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/min\/bootstrap-min-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/min\/bootstrap-min-min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
