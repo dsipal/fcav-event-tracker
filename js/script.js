@@ -30,41 +30,51 @@ function genURL(data, i, post) {
 }
 
 function makeEvents(data, page) {
+    
     var posts = 6;
     var b = 0;
     var start = (posts * page);
+
     for (var i = start; i < start + posts; i++) {
+
         var len = 350;
         var con = data[i]["Event Notes"];
         var s = con.substr(0, len);
 
-
-
         var event = `
             <div class="clearfix event" id="event-` + data[i].ID + `">
             <div class="event-img-box">
-                <a href="` + genURL(data, i, false) + `"><img src="` + IMAGES[b] + `" class="event-img" /></a>
+                <a href="` + genURL(data, i, false) + `">
+                    <img src="` + IMAGES[b] + `" class="event-img" />
+                </a>
                 <div class="event-share-url">
-                    <a class="btn btn-primary" id="e` + data[i].ID + `" href="` + genURL(data, i, false) + `">View on Map</a>
+                    <a class="btn btn-primary" href="` + genURL(data, i, false) + `">View on Map</a>
                 </div>
             </div>
-            <a href="post.html?id=` + data[i].ID + `"><h3 class="event-title">` + data[i].Title + `</h3></a>
-            <span class="event-date">` + data[i].Date + `-</span>
+            <a href="post.html?id=` + data[i].ID + `" id="title-tracker">
+                <h3 class="event-title">` + data[i].Title + `</h3>
+            </a>
+            <small class="event-date">` + data[i].Date + `-</small>
             <p class="event-text">
             ` + s + `...
             </p>
             <div class="read-more">
-                [<a href="post.html?id=` + data[i].ID + `">Read More</a>]
+                [<a href="post.html?id=` + data[i].ID + `" id="read-tracker">Read More</a>]
             </div>
 
             <small class="event-author">` + data[i].Author + `</span>
         </div>
-        `
+        `;
+
         $("#post-list").append(event);
-        if(b == 5){
-            $()
+        if(b == posts-1){
+            $('event-'+data[i].ID).css({'border-bottom':'none'});
         }
+
         b++;
+        if(b == (posts-1)){
+            $('event-'+data[i].ID).css({'border-bottom':'none'});
+        }
     }
 }
 
@@ -127,4 +137,6 @@ function setPostData(data) {
     $(".post-date").html(date);
     $(".post-author").html(author);
     $(".post-share-url").attr("href", shareUrl);
+
+
 }

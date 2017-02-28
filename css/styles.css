@@ -5,7 +5,7 @@
 }
 .event-img-box {
     float: left;
-    height: 170px;
+    height: 200px;
     width: 150px;
     margin: 20px;
     display: inline-block;
@@ -19,11 +19,8 @@
     margin-bottom: 0px;
 }
 .event-date {
-    font-size: 10px;
     color: #b9b9b9;
     text-align: left;
-    position: relative;
-    bottom: 5px;
 }
 .event-author {
     float: right;

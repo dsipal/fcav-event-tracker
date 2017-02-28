@@ -15,6 +15,7 @@ body {
     background: url('bg.png') no-repeat center 0 -webkit-gradient(linear, left top, left bottom, from(#cccc99), to(#aeac9e)) #aeac9e;
     background: url('bg.png') no-repeat center 0 -moz-linear-gradient(top, #cccc99, #aeac9e) #aeac9e;
     background-image: url('bg.png') no-repeat center 0 -webkit-linear-gradient(top, #cccc99 0%, #aeac9e 100%) #aeac9e;
+    padding-bottom: 25px;
 }
 
 body, td, th {
@@ -83,7 +84,7 @@ input.form-submit {
 }
 
 #forwarn {
-    font-size: 48px;
+    font-size: 36px;
     font-family: Verdana, Geneva, sans-serif;
     font-weight: bold;
     font-style: italic;
@@ -144,5 +145,4 @@ input.form-submit {
 .body-footer {
     background-color: #6e6e62;
     height: 60px;
-    margin: 0;
 }

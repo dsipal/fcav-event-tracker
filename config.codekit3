@@ -7,7 +7,7 @@
 		"uuidString": "14D721B8-58C9-4989-820E-554A61D614EB"
 		}
 	],
-"creatorBuild": "25504",
+"creatorBuild": "25568",
 "files": {
 	"\/.gitignore": {
 		"ft": 8192,
@@ -119,6 +119,16 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"\/css\/global-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/global-min-min.css",
+		"oF": 0,
+		"oS": 0
+		},
 	"\/css\/global.css": {
 		"aP": 1,
 		"bl": 0,
@@ -129,6 +139,16 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"\/css\/post-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/post-min-min.css",
+		"oF": 0,
+		"oS": 0
+		},
 	"\/css\/post.css": {
 		"aP": 1,
 		"bl": 0,
@@ -136,6 +156,16 @@
 		"ma": 0,
 		"oA": 0,
 		"oAP": "\/css\/post-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/css\/styles-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/styles-min-min.css",
 		"oF": 0,
 		"oS": 0
 		},
@@ -1163,6 +1193,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-multi-assign": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-multi-spaces": {
 			"active": 0,
 			"optionString": "{'exceptions': {'Property': true, 'BinaryExpression': false, 'VariableDeclarator': false, 'ImportDeclaration': false}}"
@@ -1491,6 +1525,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"prefer-promise-reject-errors": {
+			"active": 0,
+			"optionString": "{'allowEmptyReject': false}"
+			},
 		"prefer-rest-params": {
 			"active": 0,
 			"optionString": ""
@@ -1584,6 +1622,10 @@
 			"optionString": ""
 			},
 		"template-curly-spacing": {
+			"active": 0,
+			"optionString": "'never'"
+			},
+		"template-tag-spacing": {
 			"active": 0,
 			"optionString": "'never'"
 			},

@@ -11,6 +11,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/global.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
+
     <script>
         (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
@@ -31,11 +32,14 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.csv.min.js"></script>
+    <script src="js/script.js"></script>
     <script src="js/gaTrackEvents.js"></script>
     <script src="js/gaEvents.js"></script>
-    <script src="js/script.js"></script>
+
 </head>
 
 <body>
@@ -44,10 +48,9 @@
 
         <div class="clearfix" id="header">
             <div class="row" id="logo-search">
-                <div class="col-sm-6" id="logo">
-                    <a href=".">
+                <div class="col-sm-6">
+                    <a href="." id="track">
                         <h1 id="forwarn">Event Tracker</h1>
-                        <span id="subtext">Satellite-Based Change Recognition and Tracking</span>
                     </a>
                 </div>
                 <!-- <div class="col-sm-6" id="search">
@@ -84,7 +87,6 @@
     <script>
         $(document).ready(function() {
             getBrowseData();
-            gaEvents();
         });
     </script>
 </body>

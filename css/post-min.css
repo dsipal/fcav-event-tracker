@@ -1,0 +1,42 @@
+.post-img {
+  height: 300px;
+  width: 300px;
+  margin-bottom: 0px; }
+
+.post-img-box {
+  float: left;
+  height: 350px;
+  width: 300px;
+  margin: 20px;
+  margin-bottom: 0px;
+  display: inline-block; }
+
+#share-url {
+  height: 36px;
+  width: 96px;
+  margin: 5px auto; }
+
+#share-url > a {
+  color: white; }
+
+.post-share-url {
+  color: white; }
+
+.post-head {
+  margin-left: 15px; }
+
+.post-date {
+  font-size: 12px;
+  color: #b9b9b9;
+  text-align: left; }
+
+.post-text {
+  margin: 15px;
+  text-align: left;
+  font-size: 14px; }
+
+.post-author {
+  font-size: 12px;
+  color: #b9b9b9;
+  float: right;
+  margin-right: 15px; }
