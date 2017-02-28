@@ -30,7 +30,7 @@ function genURL(data, i, post) {
 }
 
 function makeEvents(data, page) {
-    
+
     var posts = 6;
     var b = 0;
     var start = (posts * page);
@@ -44,14 +44,14 @@ function makeEvents(data, page) {
         var event = `
             <div class="clearfix event" id="event-` + data[i].ID + `">
             <div class="event-img-box">
-                <a href="` + genURL(data, i, false) + `">
+                <a href="` + genURL(data, i, false) + `" class="track-click" data-ga-category="Navigation" data-ga-action="Map" data-ga-label="`+data[i].Title+`">
                     <img src="` + IMAGES[b] + `" class="event-img" />
                 </a>
                 <div class="event-share-url">
                     <a class="btn btn-primary" href="` + genURL(data, i, false) + `">View on Map</a>
                 </div>
             </div>
-            <a href="post.html?id=` + data[i].ID + `" id="title-tracker">
+            <a href="post.html?id=` + data[i].ID + `" id="title-tracker" class="track-click" data-ga-category="Navigation" data-ga-action="Post" data-ga-label="`+data[i].Title+`" >
                 <h3 class="event-title">` + data[i].Title + `</h3>
             </a>
             <small class="event-date">` + data[i].Date + `-</small>
@@ -59,7 +59,7 @@ function makeEvents(data, page) {
             ` + s + `...
             </p>
             <div class="read-more">
-                [<a href="post.html?id=` + data[i].ID + `" id="read-tracker">Read More</a>]
+                [<a href="post.html?id=` + data[i].ID + `" id="read-tracker" class="track-click" data-ga-category="Navigation" data-ga-action="Post" data-ga-label="`+data[i].Title+`">Read More</a>]
             </div>
 
             <small class="event-author">` + data[i].Author + `</span>
@@ -76,6 +76,12 @@ function makeEvents(data, page) {
             $('event-'+data[i].ID).css({'border-bottom':'none'});
         }
     }
+    
+    $('.track-click').gaTrackEventUnobtrusive({
+        useEvent:true,
+        useLabel:true,
+        event: 'click'
+    });
 }
 
 function getBrowseData() {
