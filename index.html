@@ -1,4 +1,4 @@
-<html lang="en">
+<!DOCTYPE html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -86,7 +86,20 @@
 
     <script>
         $(document).ready(function() {
-            getBrowseData();
+
+            getBrowseData(function() {
+                    $('.track-click').gaTrackEventUnobtrusive({
+                        useEvent: true,
+                        useLabel: true,
+                        event: 'click'
+                    });
+                    for(i=0;i<5;i++){
+                        console.log(i);
+                        makePageNav(5);
+                    }
+
+                }
+            );
         });
     </script>
 </body>

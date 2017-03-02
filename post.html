@@ -1,4 +1,4 @@
-<html lang="en">
+<!DOCTYPE html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -45,7 +45,7 @@
         <div class="clearfix" id="header">
             <div class="row" id="logo-search">
                 <div class="col-sm-6" id="logo">
-                    <a href=".">
+                    <a href="." class="track-click" data-ga-category="Navigation" data-ga-action="Home" data-ga-label="index">
                         <h1 id="forwarn">Event Tracker</h1>
                     </a>
                 </div>
@@ -66,10 +66,13 @@
             </div>
             <div class="clearfix">
                 <div class="post-img-box">
-                    <img src="#" / class="post-img">
-                    <div id="share-url">
-                        <a class="post-share-url btn btn-primary" href="#">View on Map</a>
-                    </div>
+                    <img src="#" class="post-img" />
+                        <div id="share-url">
+                            <a href="#" class="post-share-url btn btn-primary track-click" data-ga-category="Navigation" data-ga-action="Map" data-ga-label="">
+                            View on Map
+                            </a>
+                        </div>
+
                 </div>
                 <div class="post-text">
 
@@ -85,7 +88,13 @@
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script>
             $(document).ready(function() {
-                getPostData();
+                getPostData(function() {
+                    $('.track-click').gaTrackEventUnobtrusive({
+                        useEvent: true,
+                        useLabel: true,
+                        event: 'click'
+                    });
+                });
             });
         </script>
 </body>

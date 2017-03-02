@@ -38,3 +38,8 @@
 .read-more {
     margin-top: 10px;
 }
+.page{
+    font-weight: bold;
+    color: black;
+    border: 10px;
+}

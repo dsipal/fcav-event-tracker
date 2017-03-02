@@ -29,7 +29,7 @@ function genURL(data, i, post) {
     return url;
 }
 
-function makeEvents(data, page) {
+function makeEvents(data, page, callback) {
 
     var posts = 6;
     var b = 0;
@@ -48,7 +48,7 @@ function makeEvents(data, page) {
                     <img src="` + IMAGES[b] + `" class="event-img" />
                 </a>
                 <div class="event-share-url">
-                    <a class="btn btn-primary" href="` + genURL(data, i, false) + `">View on Map</a>
+                    <a class="btn btn-primary track-click" href="` + genURL(data, i, false) + `" data-ga-category="Navigation" data-ga-action="Map" data-ga-label="`+data[i].Title+`">View on Map</a>
                 </div>
             </div>
             <a href="post.html?id=` + data[i].ID + `" id="title-tracker" class="track-click" data-ga-category="Navigation" data-ga-action="Post" data-ga-label="`+data[i].Title+`" >
@@ -67,50 +67,44 @@ function makeEvents(data, page) {
         `;
 
         $("#post-list").append(event);
-        if(b == posts-1){
-            $('event-'+data[i].ID).css({'border-bottom':'none'});
-        }
 
         b++;
-        if(b == (posts-1)){
-            $('event-'+data[i].ID).css({'border-bottom':'none'});
+        if(b == (posts)){
+            console.log(data[i].ID);
+            $('#event-'+data[i].ID).css({'border-bottom':'none'});
         }
     }
-    
-    $('.track-click').gaTrackEventUnobtrusive({
-        useEvent:true,
-        useLabel:true,
-        event: 'click'
-    });
+    callback ();
 }
 
-function getBrowseData() {
+function getBrowseData(callback) {
     var page = parseInt(getQueryVar("page"));
     if (isNaN(page)) {
         page = 0;
     }
     var promise = makePromise();
-    promise.then(data => makeEvents($.csv.toObjects(data), page));
+    promise.then(data => makeEvents($.csv.toObjects(data), page, callback));
 }
 
-function makePageNav(page) {
-    var pageNav = `
-    <div id="pageNav">
-        <span id="p0">[<a href="index.html?page=0">1</a>]</span>
-    </div>
-    `;
-    $("#event-body").append(pageNav);
-    $("#p" + page).css("font-weight", "bold");
-    $("#p" + page + ">a").css("color", "black");
+function makePageNav(pages) {
+    var pageNav = `<div id="pageNav"></div>`;
+    $("#post-list").append(pageNav);
+
+    for(i=0;i<pages;i++){
+        var pageNum = i+1
+        var page = `<span id="p`+(i)+`" class="page">[<a href="index.html?page=`+pageNum+`">`+pageNum+`</a>]</span>`;
+        $("#pageNav").append(page);
+    }
+
 }
 
 
-function getPostData() {
+function getPostData(callback) {
     var promise = makePromise();
-    promise.then(data => setPostData($.csv.toObjects(data)));
+    promise.then(data => setPostData($.csv.toObjects(data), callback));
 }
 
-function setPostData(data) {
+function setPostData(data, callback) {
     var post = getQueryVar("id");
     var title;
     var date;
@@ -143,6 +137,8 @@ function setPostData(data) {
     $(".post-date").html(date);
     $(".post-author").html(author);
     $(".post-share-url").attr("href", shareUrl);
+    $(".post-share-url").attr("data-ga-label", title);
 
+    callback();
 
 }
