@@ -22,6 +22,9 @@
     color: #b9b9b9;
     text-align: left;
 }
+.event-text{
+    margin-top: 10px;
+}
 .event-author {
     float: right;
     margin-right: 15px;
@@ -41,5 +44,6 @@
 .page{
     font-weight: bold;
     color: black;
-    border: 10px;
+    display: inline-block;
+    margin: 2px;
 }

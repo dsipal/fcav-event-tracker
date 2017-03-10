@@ -70,10 +70,10 @@ function makeEvents(data, page, callback) {
 
         b++;
         if(b == (posts)){
-            console.log(data[i].ID);
             $('#event-'+data[i].ID).css({'border-bottom':'none'});
         }
     }
+    //makePageNav();
     callback ();
 }
 
@@ -87,12 +87,12 @@ function getBrowseData(callback) {
 }
 
 function makePageNav(pages) {
-    var pageNav = `<div id="pageNav"></div>`;
+    var pageNav = `<ol id="pageNav"></ol>`;
     $("#post-list").append(pageNav);
 
     for(i=0;i<pages;i++){
         var pageNum = i+1
-        var page = `<span id="p`+(i)+`" class="page">[<a href="index.html?page=`+pageNum+`">`+pageNum+`</a>]</span>`;
+        var page = `<li id="p`+(i)+`" class="page">[<a href="index.html?page=`+pageNum+`">`+pageNum+`</a>]</li>`;
         $("#pageNav").append(page);
     }
 
